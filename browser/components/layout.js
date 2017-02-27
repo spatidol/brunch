@@ -29,12 +29,6 @@ export default class Layout extends React.Component {
                 <div id="navbar" className="collapse navbar-collapse">
                   <ul className="nav navbar-nav navbar-right">
                     <li>
-                      <form onSubmit={() => searchLocation()}>
-                        <label>
-                          <input type="text" defaultValue="location" />
-                        </label>
-                        <input type="submit" value="Submit" />
-                      </form>
                     </li>
                   </ul>
                 </div>

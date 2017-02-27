@@ -29,9 +29,9 @@ const selectPhoto = function (photo) {
 
 /////////thunk action creators
 
-export const loadBrunchPlaces = function () {
+export const loadBrunchPlaces = function (location) {
   return function (dispatch) {
-    fetch('/api/brunchplaces')
+    fetch(`/api/brunchplaces/${location.params.location}`)
       .then(res => res.json())
       .then(brunchplaces => {
         dispatch(receiveBrunchPlaces(brunchplaces.results));
@@ -42,7 +42,7 @@ export const loadBrunchPlaces = function () {
 
 export const loadOneBrunch = function (brunchId) {
   return function (dispatch) {
-    fetch(`/api/brunchplaces/${brunchId}`)
+    fetch(`/api/brunchplace/${brunchId}`)
       .then(res => res.json())
       .then(brunch => {
         return dispatch(selectBrunch(brunch.result));
@@ -53,7 +53,7 @@ export const loadOneBrunch = function (brunchId) {
 
 export const loadPhoto = function (brunchId) {
   return function (dispatch) {
-    fetch(`/api/brunchplaces/${brunchId}`)
+    fetch(`/api/brunchplace/${brunchId}`)
       .then(res => res.json())
       .then(brunch => {
         return dispatch(selectPhoto(brunch.result.photos[0].photo_reference));

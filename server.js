@@ -45,8 +45,8 @@ app.get('/', function (req, res, next) {
 
 
 
-app.get('/api/brunchplaces', function(req, res) {
-  request('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&keyword=brunch&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA', function (error, response, body) {
+app.get('/api/brunchplaces/:location', function(req, res) {
+  request(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${req.params.location}&radius=500&type=restaurant&keyword=brunch&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`, function (error, response, body) {
       res.send(body);
         // body.map(function(brunch){
         //   return {
@@ -58,7 +58,7 @@ app.get('/api/brunchplaces', function(req, res) {
     });
 });
 
-app.get('/api/brunchplaces/:brunchId', function(req, res){
+app.get('/api/brunchplace/:brunchId', function(req, res){
   request(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${req.params.brunchId}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       return res.send(body)

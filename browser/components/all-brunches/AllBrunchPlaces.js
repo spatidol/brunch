@@ -15,7 +15,7 @@ export default class AllBrunchPlaces extends Component {
             return (
               <ul key={brunch.id} className="list-unstyled">
                 <li>
-                  <Link to={`brunchplaces/${brunch.place_id}`}> { brunch.name }</Link>
+                  <Link to={`brunchplace/${brunch.place_id}`}> { brunch.name }</Link>
                 </li>
               </ul>
             )
