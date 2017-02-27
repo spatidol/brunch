@@ -23,7 +23,7 @@ export default class Layout extends React.Component {
                       <span className="icon-bar" />
                   </button>
                   <p className="navbar-brand title">
-                    <Link to="/">BRUNCH</Link>
+                    <Link to="/"><img src="../public/img/brunch_logo.png"></img></Link>
                   </p>
                 </div>
                 <div id="navbar" className="collapse navbar-collapse">
@@ -34,6 +34,8 @@ export default class Layout extends React.Component {
                 </div>
               </div>
             </nav>
+            <div className="right-block"></div>
+            <div className="right-block-thick"></div>
             <div className="container m-t-3">
               {this.props.children}
             </div>

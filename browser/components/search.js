@@ -40,7 +40,7 @@ export default class Search extends React.Component {
           value={this.state.address}
           onChange={this.onChange}
         />
-        <button className = "btn btn-success" type="submit">Submit</button>
+        <button className = "btn btn-info" type="submit">search.</button>
       </form>
     )
   }

@@ -10,7 +10,7 @@ export default class Home extends React.Component {
       <div id= 'home'>
         <div id ='definition'>
         <h2> brunch </h2>
-        <p>/brən(t)SH/</p>
+        <p><span>/brən(t)SH/</span></p>
         <i> noun </i>
         <p> a late morning meal eaten instead of breakfast and lunch. </p>
         </div>
