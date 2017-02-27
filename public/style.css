@@ -14,6 +14,7 @@
   top: 0;
   width: 30px;
   background-color: #ADE1F4;
+
 }
 
 .right-block-thick {
@@ -23,6 +24,7 @@
   top: 0;
   width: 80px;
   background-color: #EA866B;
+
 
 }
 
@@ -127,7 +129,7 @@ p span {
   width: 92.5vw;
   height: 100vh;
   padding-top: 150px;
-  background-color: white;
+  background-color:  #BDC6C1 ; /*#BDC6C1*/
   overflow: scroll;
 }
 
@@ -136,23 +138,25 @@ p span {
   top: 0px;
   width: 92.5vw;
   height: 105px;
-  background-color: white;
+  background-color: #BDC6C1;
   z-index: 1000;
 }
 
 .brunch-grid {
   display: flex;
   flex-wrap: wrap;
+  padding: 0px 10px;
   justify-content: space-around;
 }
 
 .brunch-grid ul li {
-  margin: 20px 10px;
-  height: 210px;
+  margin: 20px 10px 40px 10px;
+  padding: 0px;
+  height: 240px;
   font-family: avenir;
-  font-size: 14px;
-  line-height: 100px;
+  line-height: 135px;
   color: #7FA092;
+  background-color: white;
 }
 
     /*triangle in corner */
@@ -172,7 +176,7 @@ p span {
     }
 
     li.corner::before {
-        border-width: 1.5em;
+        border-width: .5em;
         border-right-color: #7FA092;
         border-bottom-color: #7FA092;
     }
@@ -190,6 +194,9 @@ p span {
 
 .brunch-grid ul li a.name-bottom {
   color: #7FA092;
+  font-size: 12px;
+  text-transform: lowercase;
+  padding-left: 13px;
 }
 
 .brunch-grid ul li a img {
@@ -199,10 +206,31 @@ p span {
   filter: brightness(150%) saturate(200%);
   -webkit-filter: contrast(110%); /* Safari */
   filter: contrast(110%);
+
 }
 
 .box {
   width: 250px;
   height: 150px;
   overflow: hidden;
+}
+
+
+li.corner {
+-webkit-transform:scale(1); /*Webkit: Scale down image to 0.8x original size*/
+-moz-transform:scale(1); /*Mozilla scale version*/
+-o-transform:scale(1); /*Opera scale version*/
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: initial;
+
+}
+
+
+li.corner:hover {
+-webkit-transform:scale(1.04) ; /*Webkit: Scale up image to 1.2x original size*/
+-moz-transform:scale(1.04) ; /*Mozilla scale version*/
+-o-transform:scale(1.04) ; /*Opera scale version*/
 }
