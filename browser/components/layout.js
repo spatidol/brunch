@@ -36,7 +36,7 @@ export default class Layout extends React.Component {
             </nav>
             <div className="right-block"></div>
             <div className="right-block-thick"></div>
-            <div className="container m-t-3">
+            <div className="container">
               {this.props.children}
             </div>
           </div>

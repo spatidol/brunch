@@ -116,3 +116,93 @@ p span {
   height: auto;
 }
 
+
+
+/*GRID VIEW FOR BRUNCH RESUTLS */
+
+.m-t-3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 92.5vw;
+  height: 100vh;
+  padding-top: 150px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.white-nav {
+  position: fixed;
+  top: 0px;
+  width: 92.5vw;
+  height: 105px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.brunch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.brunch-grid ul li {
+  margin: 20px 10px;
+  height: 210px;
+  font-family: avenir;
+  font-size: 14px;
+  line-height: 100px;
+  color: #7FA092;
+}
+
+    /*triangle in corner */
+
+    li.corner {
+      position: relative;
+    }
+
+    li.corner::before,
+    li.corner::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    li.corner::before {
+        border-width: 1.5em;
+        border-right-color: #7FA092;
+        border-bottom-color: #7FA092;
+    }
+
+    li.corner::after {
+        border-radius: 0.4em;
+        border-width: 0;
+        border-right-color: #0c0;
+        border-top-color: #0c0;
+    }
+
+    /*end triangle in corner */
+
+
+
+.brunch-grid ul li a.name-bottom {
+  color: #7FA092;
+}
+
+.brunch-grid ul li a img {
+  width: 250px;
+  text-align: center;
+  -webkit-filter: brightness(150%) saturate(200%);  Safari
+  filter: brightness(150%) saturate(200%);
+  -webkit-filter: contrast(110%); /* Safari */
+  filter: contrast(110%);
+}
+
+.box {
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+}
