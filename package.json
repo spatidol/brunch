@@ -1,5 +1,5 @@
 {
-  "name": "puppybook",
+  "name": "brunch",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -22,6 +22,7 @@
     "nodemon": "^1.11.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-gmaps": "^1.5.0",
     "react-places-autocomplete": "^3.0.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",

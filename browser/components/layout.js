@@ -5,7 +5,7 @@ export default class Layout extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="clearfix">
                 <nav className="navbar navbar-white navbar-fixed-top">
               <div className="container p-y-1">
                 <div className="navbar-header">
@@ -36,7 +36,7 @@ export default class Layout extends React.Component {
             </nav>
             <div className="right-block"></div>
             <div className="right-block-thick"></div>
-            <div className="container">
+            <div className="container-me">
               {this.props.children}
             </div>
           </div>

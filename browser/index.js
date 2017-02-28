@@ -28,7 +28,7 @@ const onSingleBrunchEnter = function (nextRouterState) {
 
 ReactDOM.render(
   <Provider store={store}>
-    <div className="container flexbox-container">
+    <div>
       <div className="jumbotron">
         <Router history={ hashHistory }>
           <Route path="/" component= {Layout}>
