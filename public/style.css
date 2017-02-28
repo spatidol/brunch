@@ -60,7 +60,7 @@ html, body {
 #definition {
   width: 45%;
   height: 35vh;
-  margin-top: 20vh;
+  margin-top: 23vh;
   float: left;
   color: white;
   margin-right: 5%;
@@ -73,7 +73,7 @@ p span {
 #search {
   width: 50%;
   height: 35vh;
-  margin-top: 20vh;
+  margin-top: 23vh;
 
   float: left;
   position: relative;
