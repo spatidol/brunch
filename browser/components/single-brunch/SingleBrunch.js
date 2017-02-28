@@ -7,14 +7,34 @@ export default class SingleBrunch extends Component {
   }
 
   render () {
+    var num = Math.round(this.props.brunch.rating);
+
+
     return (
 
-      <div>
-        <h2>{ this.props.brunch.name }</h2>
+      <div className="info">
+        <h6>{ this.props.brunch.name }</h6>
+          <div className="border">
+            <div className="large-photo">
+              {(typeof(this.props.photo) === 'string') && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.photo}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`} /> }
+            </div>
+          </div>
+          <div className="deets">
+            <h4><a href={this.props.brunch.website}> <span className="glyphicon glyphicon-globe" aria-hidden="true"></span></a></h4>
+            <h4>
+              {this.props.brunch.price_level && Array.apply(null, Array(this.props.brunch.price_level)).map((item, i) =>
+                  <span key={i} className="glyphicon glyphicon-usd" aria-hidden="true"></span>
+              )}
+            </h4>
+            <h4>
+              {num && Array.apply(null, Array(num)).map((item, i) =>
+                  <span key={i} className="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+              )}
+            </h4>
 
-        <div>
-         {(typeof(this.props.photo) === 'string') && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.photo}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`} /> }
-        </div>
+          </div>
+
+
       </div>
     )
   }

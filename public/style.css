@@ -4,7 +4,7 @@
 }
 
 #app {
-  background-color: #7FA092  ;
+  background-color: #7FA092;
 }
 
 .right-block {
@@ -233,4 +233,123 @@ li.corner:hover {
 -webkit-transform:scale(1.04) ; /*Webkit: Scale up image to 1.2x original size*/
 -moz-transform:scale(1.04) ; /*Mozilla scale version*/
 -o-transform:scale(1.04) ; /*Opera scale version*/
+}
+
+
+
+
+/*----------SINGLE BRUNCH VIEW ----------*/
+
+h6 {
+  text-transform: lowercase;
+  color: white;
+  margin-bottom: 20px;
+  width: 441px;
+  padding: 10px;
+  border: 3px solid #ADE1F4;
+}
+
+h4, h4 a {
+  color: #FAEC6D;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 0px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+h4 a:hover {
+  color: #ADE1F4;
+}
+
+
+.info {
+  width: 510px;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 30vh;
+  padding-left: 34px;
+  background-color: #7FA092;
+}
+
+.large-photo {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+ /* border-radius: .5em;*/
+  float: left;
+
+}
+
+.border {
+  border: 3px solid #EA866B;
+  padding: 15px;
+  width: 286px;
+  height: 236px;
+  position: relative;
+  float: left;
+}
+
+.deets {
+  height: 235px;
+  width: 135px;
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 15px;
+  border: 3px solid white; /*#ADE1F4*/
+  box-sizing: border-box;
+}
+
+.large-photo img {
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  width: 320px;
+  min-width: 300px;
+  min-height: 210px;
+}
+
+
+
+@media screen and (max-width:560px){
+  h6 {
+    width: 286px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .deets {
+    height: 90px;
+    width: 286px;
+    position: relative;
+    float: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    margin: 0 auto ;
+    margin-top: 20px;
+
+  }
+
+  .border {
+    position: relative;
+    margin: 0 auto ;
+    float: none;
+    margin-top: 20px;
+  }
+
+  .info {
+    width: 100vw;
+    padding-left: 0px;
+
+  }
+
 }
