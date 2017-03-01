@@ -56,7 +56,11 @@ export const loadPhoto = function (brunchId) {
     fetch(`/api/brunchplace/${brunchId}`)
       .then(res => res.json())
       .then(brunch => {
+        if(brunch.result.photos) {
         return dispatch(selectPhoto(brunch.result.photos[1].photo_reference));
+        } else {
+          return dispatch(selectPhoto(null))
+        }
       })
       .catch(err => console.error(err));
   };

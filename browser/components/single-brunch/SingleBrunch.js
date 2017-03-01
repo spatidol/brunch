@@ -3,8 +3,8 @@ import BrunchMap from '../map'
 
 export default class SingleBrunch extends Component {
 
-  componentDidMount () {
-    // this.props.onLoadSinglePuppy();
+  componentWillMount () {
+
   }
 
   render () {
@@ -18,7 +18,7 @@ export default class SingleBrunch extends Component {
           <h6>{ this.props.brunch.name }</h6>
             <div className="border">
               <div className="large-photo">
-                {(typeof(this.props.photo) === 'string') && <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.photo}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`} /> }
+                {(typeof(this.props.photo) === 'string') ? <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.photo}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`}/> : <img src={'/public/img/photoless.png'}/> }
               </div>
             </div>
             <div className="deets">

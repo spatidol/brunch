@@ -17,7 +17,7 @@ export default class AllBrunchPlaces extends Component {
               return (
                 <ul key={brunch.id} className="list-unstyled">
                   <li className="corner">
-                    <Link to={`brunchplace/${brunch.place_id}`}> <div className="box"> <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${brunch.photos[0].photo_reference}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`} /> </div> </Link>
+                    <Link to={`brunchplace/${brunch.place_id}`}> <div className="box"> <img src={brunch.photos ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${brunch.photos[0].photo_reference}&key=AIzaSyBfORPro4T5h_hqpHX2Ug6QB1sCGOOlCbA`: 'public/img/photoless.png'} /> </div> </Link>
                     <Link className="name-bottom" to={`brunchplace/${brunch.place_id}`}> { brunch.name }</Link>
                   </li>
                 </ul>
