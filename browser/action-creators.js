@@ -1,3 +1,4 @@
+import 'whatwg-fetch';
 export const RECEIVE_BRUNCH_PLACES = 'RECEIVE_BRUNCH_PLACES';
 export const SELECT_BRUNCH = 'SELECT_BRUNCH';
 export const SELECT_PHOTO = 'SELECT_PHOTO';
