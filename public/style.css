@@ -453,11 +453,11 @@ h4 a:hover {
   .brunch-map {
     position: relative;
     margin: 0 auto;
-    top: 551px;
-    margin-bottom: 30px;
+    margin-top: 316px;
+    margin-bottom: 40px;
     width: 286px;
+    height: 296px;
 
-    left: 0;
   }
   html, body {
     background-image: none;
