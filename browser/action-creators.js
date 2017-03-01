@@ -21,7 +21,7 @@ const selectBrunch = function (brunch) {
   };
 };
 
-const selectPhoto = function (photo) {
+export const selectPhoto = function (photo) {
   return {
     type: SELECT_PHOTO,
     selectedPhoto: photo,

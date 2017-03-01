@@ -9,7 +9,7 @@ import Home from './components/Home'
 import store from './store';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory, IndexRoute, hashHistory } from 'react-router';
-import { loadBrunchPlaces, loadOneBrunch, loadPhoto } from './action-creators';
+import { loadBrunchPlaces, loadOneBrunch, loadPhoto, selectPhoto } from './action-creators';
 
 
 
@@ -19,6 +19,7 @@ const onBrunchPlacesEnter = function (location) {
 };
 
 const onSingleBrunchEnter = function (nextRouterState) {
+  store.dispatch(selectPhoto(null));
   const brunchId = nextRouterState.params.brunchId;
   const thunk = loadOneBrunch(brunchId);
   const thunk2 = loadPhoto(brunchId);

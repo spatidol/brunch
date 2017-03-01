@@ -9,6 +9,7 @@ const mapStateToProps = function (state) {
   };
 };
 
+
 const mapDispatchToProps = function (dispatch, ownProps) {
   return {
     onLoadSingleBrunch: function () {
